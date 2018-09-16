@@ -1,0 +1,20 @@
+
+h1 {
+    background-color:rgb(235, 243, 120);
+    text-align: center;
+
+}
+
+thead {
+    background-color:rgba(174, 175, 153, 0.815);
+    
+}
+
+table {
+    text-align: center;
+}
+
+#saveData{
+    display: none;
+    margin-bottom: 10px;
+}
