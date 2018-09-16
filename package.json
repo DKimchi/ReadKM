@@ -1,0 +1,15 @@
+{
+  "name": "readkm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "deploy": "gh-pages -d dist"
+  },
+  "author": "DKimchi",
+  "license": "ISC",
+  "homepage": "https://DKimchi.github.io/ReadKM",
+  "dependencies": {
+    "gh-pages": "^2.0.0"
+  }
+}
