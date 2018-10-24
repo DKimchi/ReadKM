@@ -50,7 +50,7 @@ function post(url, data) {
 // פנקציה שקוראת את שמות הרכבים של צב התנועה
 async function getCarNames() {
     await post('https://powerful-plains-19345.herokuapp.com/http://tsavhatnuatavel.appspot.com/getvalue?tag=רכבי צב התנועה').then(function (v) {
-        carNames = v[2].replace(/\"/g, '').split(','); // הופך את שמות הרכבים לארי
+        carNames = v[2].replace(/\"/g, '').split(','); // הופך את שמות הרכבים לארי 
     });
     //קוראה לפנקציה שלוקחת את הנתונים של הרכבים
     getCarData();
@@ -79,10 +79,11 @@ async function getCarData() {
 
         //הכמנס של הנתונים לטבלה במסך 
         // Create tr element
+        const displayCarName = carNames[i].split(":").shift();
         const row = document.createElement('tr');
         // Insert cols
         row.innerHTML = `
-            <th scope="row">${carNames[i]}</th>
+            <th scope="row">${displayCarName}</th>
             <td dir="ltr">${lastDate}</td>
             <td>${lastKM[i]}</td>
             <td dir="ltr">${currentDate}</td>
