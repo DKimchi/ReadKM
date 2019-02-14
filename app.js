@@ -104,18 +104,18 @@ async function getCarData() {
 }
 // פןנקציה לשלמירה של הנתונים פועלת בכפתור
 async function saveData() {
-  // שמירה של התאריך הקודם
-  //   await post(
-  //     `https://powerful-plains-19345.herokuapp.com/http://tsavhatnuatavel.appspot.com/storeavalue?tag=תאריך_קודם&value="${currentDate}"`
-  //   ).catch(err => console.log(err));
-  //   //שמירה של הק"מ הקודם לכול רכב
-  //   for (let i = 0; i < carNames.length; i++) {
-  //     await post(
-  //       `https://powerful-plains-19345.herokuapp.com/http://tsavhatnuatavel.appspot.com/storeavalue?tag=${
-  //         carNames[i]
-  //       }_קמ_קודם&value="${currentKM[i]}"`
-  //     ).catch(err => console.log(err));
-  //   }
+  שמירה של התאריך הקודם
+    await post(
+      `https://powerful-plains-19345.herokuapp.com/http://tsavhatnuatavel.appspot.com/storeavalue?tag=תאריך_קודם&value="${currentDate}"`
+    ).catch(err => console.log(err));
+    //שמירה של הק"מ הקודם לכול רכב
+    for (let i = 0; i < carNames.length; i++) {
+      await post(
+        `https://powerful-plains-19345.herokuapp.com/http://tsavhatnuatavel.appspot.com/storeavalue?tag=${
+          carNames[i]
+        }_קמ_קודם&value="${currentKM[i]}"`
+      ).catch(err => console.log(err));
+    }
   btn.innerText = 'נתונים נשמרו';
   btn.classList.add('afterSaveData');
 }
